@@ -1,20 +1,27 @@
 /**
  * WordPress dependencies
  */
-import {forwardRef, useEffect, useLayoutEffect, useMemo, useRef, useState,} from '@wordpress/element';
+import {
+	forwardRef,
+	useEffect,
+	useLayoutEffect,
+	useMemo,
+	useRef,
+	useState,
+} from '@wordpress/element';
 import deprecated from '@wordpress/deprecated';
-import {getFilesFromDataTransfer} from '@wordpress/dom';
+import { getFilesFromDataTransfer } from '@wordpress/dom';
 
 /**
  * Internal dependencies
  */
 import FormatEdit from './format-edit';
-import {getActiveFormats} from '../get-active-formats';
-import {updateFormats} from '../update-formats';
-import {useFormatTypes} from './use-format-types';
-import {useBoundaryStyle} from './use-boundary-style';
-import {useInlineWarning} from './use-inline-warning';
-import {insert} from '../insert';
+import { getActiveFormats } from '../get-active-formats';
+import { updateFormats } from '../update-formats';
+import { useFormatTypes } from './use-format-types';
+import { useBoundaryStyle } from './use-boundary-style';
+import { useInlineWarning } from './use-inline-warning';
+import { insert } from '../insert';
 import {
 	applyRecord,
 	createRecord,
@@ -27,10 +34,10 @@ import {
 /**
  * External dependencies
  */
-import {identity, thunkify} from 'ramda';
-import {handleKeyDown} from './kayHandlers/keyDownHandler';
-import {fixPlaceholderSelection} from './utils/fixPlaceholderSelection';
-import {valueToFormat} from './utils/valueToFormat';
+import { identity, thunkify } from 'ramda';
+import { handleKeyDown } from './kayHandlers/keyDownHandler';
+import { fixPlaceholderSelection } from './utils/fixPlaceholderSelection';
+import { valueToFormat } from './utils/valueToFormat';
 
 /** @typedef {import('@wordpress/element').WPSyntheticEvent} WPSyntheticEvent */
 
@@ -161,7 +168,7 @@ function RichText(
 		disableFormats,
 		format,
 		multilineTag,
-		preserveWhiteSpace
+		preserveWhiteSpace,
 	};
 
 	const lastHistoryValue = useRef( value );
@@ -334,10 +341,7 @@ function RichText(
 		}
 
 		if ( allowPrefixTransformations && inputRule ) {
-			inputRule(
-				change,
-				valueToFormat( valueToFormatData)
-			);
+			inputRule( change, valueToFormat( valueToFormatData ) );
 		}
 
 		const transformed = formatTypes.reduce(
@@ -503,10 +507,7 @@ function RichText(
 			changeHandler( newRecord.formats, newRecord.text );
 		} );
 
-		_value.current = valueToFormat(
-			valueToFormatData,
-			newRecord
-		);
+		_value.current = valueToFormat( valueToFormatData, newRecord );
 		record.current = newRecord;
 
 		// Selection must be updated first, so it is recorded in history when

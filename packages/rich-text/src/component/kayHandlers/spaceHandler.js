@@ -1,8 +1,11 @@
 /**
  * WordPress dependencies
  */
-import {isCaretAtLineStart, isModifierKey,} from '@wordpress/packages/rich-text/src/component/utils';
-import {isCollapsed} from '@wordpress/rich-text';
+import {
+	isCaretAtLineStart,
+	isModifierKey,
+} from '@wordpress/packages/rich-text/src/component/utils';
+import { isCollapsed } from '@wordpress/rich-text';
 
 export const areHandlingSpaceConditionsMet = ( {
 	isElementAListItem,

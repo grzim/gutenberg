@@ -1,8 +1,8 @@
 /**
  * WordPress dependencies
  */
-import {removeEditorOnlyFormats} from '@wordpress/packages/rich-text/build-module/component/utils';
-import {createRecord} from '@wordpress/packages/rich-text/src/component/utils';
+import { removeEditorOnlyFormats } from '@wordpress/packages/rich-text/build-module/component/utils';
+import { createRecord } from '@wordpress/packages/rich-text/src/component/utils';
 
 /**
  * Prepares data passed to `onEnter` prop on keydown.

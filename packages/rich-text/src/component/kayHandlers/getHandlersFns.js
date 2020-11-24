@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import {identity, pipe, tap} from 'ramda';
+import { identity, pipe, tap } from 'ramda';
 /**
  * WordPress dependencies
  */
-import {indentListItems} from '@wordpress/packages/rich-text/src/indent-list-items';
+import { indentListItems } from '@wordpress/packages/rich-text/src/indent-list-items';
 import {
 	handleHorizontalNavigationLogic,
 	prepareDeleteEvent,

@@ -1,12 +1,12 @@
 /**
  * WordPress dependencies
  */
-import {toHTMLString} from '@wordpress/rich-text';
+import { toHTMLString } from '@wordpress/rich-text';
 /**
  * External dependencies
  */
-import {curry} from 'ramda';
-import {removeEditorOnlyFormats} from '@wordpress/packages/rich-text/src/component/utils';
+import { curry } from 'ramda';
+import { removeEditorOnlyFormats } from '@wordpress/packages/rich-text/src/component/utils';
 
 /**
  * Converts the internal value to the external data format.

@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import {useEffect} from '@wordpress/element';
+import { useEffect } from '@wordpress/element';
 
 /*
  * Calculates and renders the format boundary style when the active formats

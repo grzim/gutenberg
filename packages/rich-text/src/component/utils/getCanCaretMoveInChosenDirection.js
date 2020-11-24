@@ -1,6 +1,10 @@
-import {LEFT, RIGHT} from "@wordpress/keycodes/src";
+import { LEFT, RIGHT } from '@wordpress/keycodes/src';
 
-export const getCanCaretMoveInChosenDirection = ( currentRecord, getDirection, event ) => {
+export const getCanCaretMoveInChosenDirection = (
+	currentRecord,
+	getDirection,
+	event
+) => {
 	const {
 		text,
 		start,
@@ -25,4 +29,3 @@ export const getCanCaretMoveInChosenDirection = ( currentRecord, getDirection, e
 	// boundary positions if needed.
 	return isCurrentActiveFormatsEmpty && isGoingOutOfTheReach;
 };
-

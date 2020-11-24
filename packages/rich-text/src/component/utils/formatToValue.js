@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import {pipe} from 'ramda';
+import { pipe } from 'ramda';
 /**
  * WordPress dependencies
  */
-import {create} from '@wordpress/rich-text';
+import { create } from '@wordpress/rich-text';
 import {
 	applyMultilineTagWhenNeeded,
 	createPrepareEditableTree,

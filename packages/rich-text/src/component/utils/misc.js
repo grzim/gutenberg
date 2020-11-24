@@ -21,10 +21,10 @@ import {
 	sort,
 	when,
 } from 'ramda';
-import {create, removeFormat,} from '@wordpress/packages/rich-text';
-import {apply} from '@wordpress/packages/rich-text/src/to-dom';
-import {LINE_SEPARATOR} from '@wordpress/packages/rich-text/src/special-characters';
-import {formatToValue} from '@wordpress/packages/rich-text/src/component/utils/formatToValue';
+import { create, removeFormat } from '@wordpress/packages/rich-text';
+import { apply } from '@wordpress/packages/rich-text/src/to-dom';
+import { LINE_SEPARATOR } from '@wordpress/packages/rich-text/src/special-characters';
+import { formatToValue } from '@wordpress/packages/rich-text/src/component/utils/formatToValue';
 
 export const getRecordData = ( {
 	ref,
@@ -39,8 +39,7 @@ export const getRecordData = ( {
 } );
 export const getOwnerDocument = ( ref ) => ref.current.ownerDocument;
 
-export const getDefaultView = ( ref ) =>
-	getOwnerDocument( ref ).defaultView;
+export const getDefaultView = ( ref ) => getOwnerDocument( ref ).defaultView;
 
 export const getDirection = ( { getWin, ref } ) =>
 	getWin().getComputedStyle( ref.current ).direction;

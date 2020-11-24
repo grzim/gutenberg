@@ -1,8 +1,8 @@
-import {createRecord} from "@wordpress/packages/rich-text/src/component/utils";
-import {BACKSPACE} from "@wordpress/keycodes/src";
-import {isCollapsed, remove} from "@wordpress/rich-text";
-import {curry} from "ramda";
-import {removeLineSeparator} from "@wordpress/packages/rich-text/build-module/remove-line-separator";
+import { createRecord } from '@wordpress/packages/rich-text/src/component/utils';
+import { BACKSPACE } from '@wordpress/keycodes/src';
+import { isCollapsed, remove } from '@wordpress/rich-text';
+import { curry } from 'ramda';
+import { removeLineSeparator } from '@wordpress/packages/rich-text/build-module/remove-line-separator';
 
 /**
  * Handles delete on keydown:

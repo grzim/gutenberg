@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import {useDispatch, useSelect} from '@wordpress/data';
+import { useDispatch, useSelect } from '@wordpress/data';
 
 function formatTypesSelector( select ) {
 	return select( 'core/rich-text' ).getFormatTypes();

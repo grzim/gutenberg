@@ -1,13 +1,18 @@
 /**
  * WordPress dependencies
  */
-import {LEFT, RIGHT} from '@wordpress/keycodes/src';
+import { LEFT, RIGHT } from '@wordpress/keycodes/src';
 /**
  * Internal dependencies
  */
-import {applyRecord, getLonger, isDescending, isModifierKey,} from '../utils/misc.js';
-import {isCollapsed} from '@wordpress/rich-text';
-import {getCanCaretMoveInChosenDirection} from '@wordpress/packages/rich-text/src/component/utils/getCanCaretMoveInChosenDirection';
+import {
+	applyRecord,
+	getLonger,
+	isDescending,
+	isModifierKey,
+} from '../utils/misc.js';
+import { isCollapsed } from '@wordpress/rich-text';
+import { getCanCaretMoveInChosenDirection } from '@wordpress/packages/rich-text/src/component/utils/getCanCaretMoveInChosenDirection';
 
 const EMPTY_ACTIVE_FORMATS = [];
 
@@ -24,7 +29,7 @@ const getNewActiveFormatLength = ( {
 	const hasPaddingLeft =
 		//toDo fix it
 		isReverse &&
-		isDescending( [ currentActiveFormats, formatsBefore, formatsAfter ]);
+		isDescending( [ currentActiveFormats, formatsBefore, formatsAfter ] );
 
 	return (
 		currentActiveFormats.length +

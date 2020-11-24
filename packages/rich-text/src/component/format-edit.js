@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import {getActiveFormat} from '../get-active-format';
-import {getActiveObject} from '../get-active-object';
+import { getActiveFormat } from '../get-active-format';
+import { getActiveObject } from '../get-active-object';
 
 /**
  * Set of all interactive content tags.

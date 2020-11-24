@@ -10,11 +10,18 @@ import {
 /**
  * External dependencies
  */
-import {pipe, thunkify} from 'ramda';
-import {DELETE, ENTER, ESCAPE, LEFT, RIGHT, SPACE,} from '@wordpress/keycodes/src';
-import {getHandlersData} from '@wordpress/packages/rich-text/src/component/kayHandlers/getHandlersData';
-import {getHandlersConditions} from '@wordpress/packages/rich-text/src/component/kayHandlers/getHandlersConditions';
-import {getHandlersFns} from '@wordpress/packages/rich-text/src/component/kayHandlers/getHandlersFns';
+import { pipe, thunkify } from 'ramda';
+import {
+	DELETE,
+	ENTER,
+	ESCAPE,
+	LEFT,
+	RIGHT,
+	SPACE,
+} from '@wordpress/keycodes/src';
+import { getHandlersData } from '@wordpress/packages/rich-text/src/component/kayHandlers/getHandlersData';
+import { getHandlersConditions } from '@wordpress/packages/rich-text/src/component/kayHandlers/getHandlersConditions';
+import { getHandlersFns } from '@wordpress/packages/rich-text/src/component/kayHandlers/getHandlersFns';
 
 const keyDownHandler = ( {
 	handlersData: {

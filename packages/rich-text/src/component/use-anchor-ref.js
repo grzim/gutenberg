@@ -1,12 +1,12 @@
 /**
  * WordPress dependencies
  */
-import {useMemo} from '@wordpress/element';
+import { useMemo } from '@wordpress/element';
 
 /**
  * Internal dependencies
  */
-import {getActiveFormat} from '../get-active-format';
+import { getActiveFormat } from '../get-active-format';
 
 /** @typedef {import('@wordpress/element').RefObject} RefObject */
 /** @typedef {import('../register-format-type').RichTextFormatType} RichTextFormatType */
