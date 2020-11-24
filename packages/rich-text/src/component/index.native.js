@@ -7,41 +7,41 @@
  * WordPress dependencies
  */
 import RCTAztecView from '@wordpress/react-native-aztec';
-import { View, Platform } from 'react-native';
-import { addMention } from '@wordpress/react-native-bridge';
-import { get, pickBy, debounce } from 'lodash';
+import {Platform, View} from 'react-native';
+import {addMention} from '@wordpress/react-native-bridge';
+import {debounce, get, pickBy} from 'lodash';
 import memize from 'memize';
 
 /**
  * WordPress dependencies
  */
-import { BlockFormatControls } from '@wordpress/block-editor';
-import { Component } from '@wordpress/element';
-import { Toolbar, ToolbarButton } from '@wordpress/components';
-import { compose, withPreferredColorScheme } from '@wordpress/compose';
-import { withSelect } from '@wordpress/data';
-import { childrenBlock } from '@wordpress/blocks';
-import { decodeEntities } from '@wordpress/html-entities';
-import { BACKSPACE, DELETE, ENTER } from '@wordpress/keycodes';
-import { isURL } from '@wordpress/url';
-import { Icon, atSymbol } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import {BlockFormatControls} from '@wordpress/block-editor';
+import {Component} from '@wordpress/element';
+import {Toolbar, ToolbarButton} from '@wordpress/components';
+import {compose, withPreferredColorScheme} from '@wordpress/compose';
+import {withSelect} from '@wordpress/data';
+import {childrenBlock} from '@wordpress/blocks';
+import {decodeEntities} from '@wordpress/html-entities';
+import {BACKSPACE, DELETE, ENTER} from '@wordpress/keycodes';
+import {isURL} from '@wordpress/url';
+import {atSymbol, Icon} from '@wordpress/icons';
+import {__} from '@wordpress/i18n';
 
 /**
  * Internal dependencies
  */
 import FormatEdit from './format-edit';
-import { applyFormat } from '../apply-format';
-import { getActiveFormat } from '../get-active-format';
-import { getActiveFormats } from '../get-active-formats';
-import { insert } from '../insert';
-import { getTextContent } from '../get-text-content';
-import { isEmpty, isEmptyLine } from '../is-empty';
-import { create } from '../create';
-import { toHTMLString } from '../to-html-string';
-import { removeLineSeparator } from '../remove-line-separator';
-import { isCollapsed } from '../is-collapsed';
-import { remove } from '../remove';
+import {applyFormat} from '../apply-format';
+import {getActiveFormat} from '../get-active-format';
+import {getActiveFormats} from '../get-active-formats';
+import {insert} from '../insert';
+import {getTextContent} from '../get-text-content';
+import {isEmpty, isEmptyLine} from '../is-empty';
+import {create} from '../create';
+import {toHTMLString} from '../to-html-string';
+import {removeLineSeparator} from '../remove-line-separator';
+import {isCollapsed} from '../is-collapsed';
+import {remove} from '../remove';
 import styles from './style.scss';
 
 const unescapeSpaces = ( text ) => {
